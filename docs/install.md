@@ -100,6 +100,7 @@ pip install --upgrade pip
 apt-get install gcc libffi-dev python-dev openssl  libssl-dev
 apt-get install libmysqlclient-dev
 pip install mysqlclient
+pip install future
 ```
 
 ### 1.3.2. pip 安装python依赖包

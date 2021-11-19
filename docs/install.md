@@ -92,6 +92,16 @@ yum install gcc libffi-devel python-devel openssl-devel
 yum install mysql-devel
 ```
 
+### 1.3.1.1. apt 安装依赖包
+
+```
+apt-get install python  #执行python命令，确认是否安装的是python2.x
+pip install --upgrade pip
+apt-get install gcc libffi-dev python-dev openssl  libssl-dev
+apt-get install libmysqlclient-dev
+pip install mysqlclient
+```
+
 ### 1.3.2. pip 安装python依赖包
 
 通过工程目录下`/Metis/docs/requirements.txt`安装

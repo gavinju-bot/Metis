@@ -1,0 +1,24 @@
+version: "3"
+services:
+  mysql:
+    container_name: metis-db
+    hostname: metis-db
+    image: mysql:5.7.35
+    ports:
+      - "3306:3306"
+    environment:
+      TZ: Asia/Shanghai      
+      MYSQL_ROOT_PASSWORD: root#123
+    restart: always
+    volumes:
+      - /opt/metis_db:/var/lib/mysql
+      - ./mysql/conf/mysql_db.cnf:/etc/mysql/conf.d/mysql_db.cnf
+      - ./mysql/init/init_db.sql:/docker-entrypoint-initdb.d/init_db.sql
+    expose:
+      - "3306"
+    networks:
+      - "AmberNet01"
+
+networks:
+  AmberNet01:
+    driver: bridge
